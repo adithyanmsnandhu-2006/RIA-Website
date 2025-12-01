@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS | RIA</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="page-dark">
+
+<header class="navbar">
+    <div class="brand">RIA</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Ria.html">RIA</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="developments.html">Developments</a></li>
+            <li><a href="codes.html">Codes</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <!-- PAGE TITLE -->
+    <section class="projects-header">
+        <h1 class="projects-title">PROJECTS</h1>
+        <p class="projects-sub">Every creation. Every attempt. Every evolution — documented with honesty.</p>
+    </section>
+
+    <!-- FILTER TABS -->
+    <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">ALL</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="python">PYTHON</button>
+        <button class="filter-btn" data-filter="design">UI/UX</button>
+        <button class="filter-btn" data-filter="video">VIDEOS</button>
+        <button class="filter-btn" data-filter="other">OTHER</button>
+    </div>
+
+    <!-- PROJECT GRID -->
+    <div class="project-grid">
+
+        <!-- SAMPLE CARDS (REPLACE CONTENT ANYTIME) -->
+        <div class="project-card" data-category="ai">
+            <h3>RIA Voice Response Prototype</h3>
+            <p>First testing of RIA voice input & TTS output.</p>
+        </div>
+
+        <div class="project-card" data-category="python">
+            <h3>Python Automation Script</h3>
+            <p>Automated log file cleanup and process execution.</p>
+        </div>
+
+        <div class="project-card" data-category="design">
+            <h3>Neon UI Concept for AI console</h3>
+            <p>Futuristic Figma UI concept.</p>
+        </div>
+
+        <div class="project-card" data-category="video">
+            <h3>Short Promo Edit</h3>
+            <p>Created for event introduction.</p>
+        </div>
+
+        <div class="project-card" data-category="other">
+            <h3>Background Noise Reduction Test</h3>
+            <p>Experimenting audio cleanup techniques.</p>
+        </div>
+
+    </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script src="../script.js"></script>
+
+</body>
+</html>

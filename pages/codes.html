@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIA | Codes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="page-dark">
+
+<header class="navbar">
+    <div class="brand">RIA</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="ria.html">RIA</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="developments.html">Developments</a></li>
+            <li><a href="codes.html" class="active-page">Codes</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <h1 class="codes-title">CODE BASE</h1>
+    <p class="codes-sub">Source logs of RIA development — structured, modular & documented.</p>
+
+    <!-- TABS -->
+    <div class="code-tabs">
+        <button class="code-tab active" data-target="core">Core AI</button>
+        <button class="code-tab" data-target="speech">Speech Engine</button>
+        <button class="code-tab" data-target="automation">Automation</button>
+        <button class="code-tab" data-target="security">Security</button>
+        <button class="code-tab" data-target="experiments">Experiments</button>
+    </div>
+
+    <!-- TAB CONTENT AREA -->
+    <div id="core" class="code-content active">
+
+        <!-- ACCORDION -->
+        <div class="accordion">
+            <div class="accordion-header">Base Structure Template</div>
+            <div class="accordion-body">
+                <button class="copy-btn">Copy</button>
+<pre><code class="code-block">
+# Start module for RIA architecture
+import time
+
+class RIA:
+    def __init__(self):
+        self.memory = {}
+        self.state = "idle"
+
+    def listen(self):
+        pass
+
+    def think(self):
+        pass
+
+    def respond(self):
+        pass
+</code></pre>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">Initial Testing Script</div>
+            <div class="accordion-body">
+                <button class="copy-btn">Copy</button>
+<pre><code class="code-block">
+print("RIA System Ready...")
+</code></pre>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- EMPTY PLACEHOLDER TABS -->
+    <div id="speech" class="code-content">
+        <p class="empty-msg">Speech engine modules will appear here.</p>
+    </div>
+
+    <div id="automation" class="code-content">
+        <p class="empty-msg">Automation modules will be added soon.</p>
+    </div>
+
+    <div id="security" class="code-content">
+        <p class="empty-msg">Security & authorization logic coming soon.</p>
+    </div>
+
+    <div id="experiments" class="code-content">
+        <p class="empty-msg">Experimental prototypes will be logged here.</p>
+    </div>
+
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

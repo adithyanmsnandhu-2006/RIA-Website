@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIA | Developments</title>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS (same as other pages) -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="page-dark">
+
+<header class="navbar">
+    <div class="brand">RIA</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Ria.html">RIA</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="developments.html">Developments</a></li>
+            <li><a href="codes.html">Codes</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <section class="dev-page">
+        <h1 class="dev-title">DEVELOPMENTS LOG</h1>
+        <p class="dev-sub">
+            How RIA grows — day by day, week by week, month by month.
+        </p>
+
+        <!-- TABS -->
+        <div class="dev-tabs">
+            <button class="dev-tab active" data-target="daily-panel">Daily</button>
+            <button class="dev-tab" data-target="weekly-panel">Weekly</button>
+            <button class="dev-tab" data-target="monthly-panel">Monthly</button>
+        </div>
+
+        <!-- PANELS -->
+        <div class="dev-panels">
+
+            <!-- DAILY -->
+            <section id="daily-panel" class="dev-panel active">
+                <h2 class="dev-panel-title">Daily Progress</h2>
+                <p class="dev-panel-sub">
+                    Small steps taken every day — coding sessions, bugs solved, design changes, ideas tested.
+                </p>
+
+                <div class="dev-list">
+                    <!-- Example entry – you will later replace / duplicate these -->
+                    <article class="dev-card">
+                        <div class="dev-card-tag">Example</div>
+                        <h3 class="dev-card-title">2025-11-30 — Initial Website Structure</h3>
+                        <p class="dev-card-text">
+                            Set up the RIA portfolio site structure, built the home page, core vision page
+                            and the first version of the workflow visualization.
+                        </p>
+                    </article>
+
+                    <article class="dev-card dev-card-placeholder">
+                        <h3 class="dev-card-title">Your next log goes here</h3>
+                        <p class="dev-card-text">
+                            Each day, add one short entry: what you built, what broke, what you learned.
+                            This section will slowly become proof of your discipline.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- WEEKLY -->
+            <section id="weekly-panel" class="dev-panel">
+                <h2 class="dev-panel-title">Weekly Summary</h2>
+                <p class="dev-panel-sub">
+                    One level higher — what changed this week in RIA’s abilities, architecture and stability.
+                </p>
+
+                <div class="dev-list">
+                    <article class="dev-card dev-card-placeholder">
+                        <h3 class="dev-card-title">Week 1 — Summary (Sample)</h3>
+                        <p class="dev-card-text">
+                            Replace this with a weekly summary: major milestones, problems faced, what you fixed,
+                            and what you will attack next week.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- MONTHLY -->
+            <section id="monthly-panel" class="dev-panel">
+                <h2 class="dev-panel-title">Monthly Reflection</h2>
+                <p class="dev-panel-sub">
+                    The bigger picture — how far RIA moved compared to last month, and where the project is heading.
+                </p>
+
+                <div class="dev-list">
+                    <article class="dev-card dev-card-placeholder">
+                        <h3 class="dev-card-title">Month 1 — Reflection (Sample)</h3>
+                        <p class="dev-card-text">
+                            At the end of each month, write a brutal, honest reflection:
+                            what you actually achieved, where you failed, and what must change.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- SIMPLE TAB SCRIPT (ONLY FOR THIS PAGE) -->
+<script>
+    const tabs = document.querySelectorAll('.dev-tab');
+    const panels = document.querySelectorAll('.dev-panel');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // remove active class from all tabs
+            tabs.forEach(t => t.classList.remove('active'));
+            // hide all panels
+            panels.forEach(p => p.classList.remove('active'));
+
+            // activate clicked tab
+            tab.classList.add('active');
+
+            // show target panel
+            const targetId = tab.getAttribute('data-target');
+            const panel = document.getElementById(targetId);
+            if (panel) {
+                panel.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

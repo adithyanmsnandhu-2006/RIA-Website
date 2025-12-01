@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIA | Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="page-dark">
+
+<header class="navbar">
+    <div class="brand">RIA</div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="Ria.html">RIA</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="developments.html">Developments</a></li>
+            <li><a href="codes.html">Codes</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="page-container">
+
+    <h1 class="gallery-title">GALLERY</h1>
+    <p class="gallery-sub">Screenshots, videos, voice logs & documentation of the journey.</p>
+
+    <!-- TABS -->
+    
+
+    <!-- TAB CONTENT -->
+    <div id="images" class="tab-content active">
+        <div class="gallery-grid">
+           <div class="gallery-menu">
+    <button class="gallery-button" data-target="images-section">Images</button>
+    <button class="gallery-button" data-target="videos-section">Videos</button>
+    <button class="gallery-button" data-target="voice-section">Voice</button>
+    <button class="gallery-button" data-target="documents-section">Documents</button>
+</div>
+ <!-- items will go here later -->
+        </div>
+    </div>
+
+    <div id="videos" class="tab-content">
+        <div class="gallery-grid">
+            <!-- video thumbnails will go here -->
+        </div>
+    </div>
+
+    <div id="voice" class="tab-content">
+        <div class="gallery-grid">
+            <!-- audio logs -->
+        </div>
+    </div>
+
+    <div id="docs" class="tab-content">
+        <div class="gallery-grid">
+            <!-- PDF / text logs -->
+        </div>
+    </div>
+    <!-- GALLERY CONTENT SECTIONS -->
+<div id="gallery-sections">
+
+    <div id="images-section" class="gallery-section active">
+        <h2 class="section-heading">Images</h2>
+        <div class="gallery-grid">
+            <p>No images uploaded yet.</p>
+        </div>
+    </div>
+
+    <div id="videos-section" class="gallery-section">
+        <h2 class="section-heading">Videos</h2>
+        <div class="gallery-grid">
+            <p>No videos uploaded yet.</p>
+        </div>
+    </div>
+
+    <div id="voice-section" class="gallery-section">
+        <h2 class="section-heading">Voice Logs</h2>
+        <div class="gallery-grid">
+            <p>No voice recordings uploaded yet.</p>
+        </div>
+    </div>
+
+    <div id="documents-section" class="gallery-section">
+        <h2 class="section-heading">Documents</h2>
+        <div class="gallery-grid">
+            <p>No documents uploaded yet.</p>
+        </div>
+    </div>
+
+</div>
+
+
+</main>
+<script>
+const sections = document.querySelectorAll(".gallery-section");
+const buttons = document.querySelectorAll(".gallery-button");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        // remove active from all
+        sections.forEach(section => section.classList.remove("active"));
+        buttons.forEach(b => b.classList.remove("active"));
+
+        // activate button + section
+        document.getElementById(btn.dataset.target).classList.add("active");
+        btn.classList.add("active");
+    });
+});
+</script>
+
+
+
+<script src="../script.js"></script>
+</body>
+</html>
