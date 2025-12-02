@@ -151,3 +151,21 @@ async function loadGalleryImages() {
 }
 
 loadGalleryImages();
+async function loadDailyLogs() {
+
+    // Path to newest daily log markdown file
+    const filePath = "../assets/developments/daily/2025-12-02.md";  
+
+    const response = await fetch(filePath);
+    const markdownText = await response.text();
+
+    // Simple Markdown → HTML converter
+    const htmlContent = markdownText
+        .replace(/### (.*)/g, "<h3>$1</h3>")
+        .replace(/\*\*(.*)\*\*/g, "<strong>$1</strong>")
+        .replace(/\n/g, "<br>");
+
+    document.getElementById("daily-log-container").innerHTML = htmlContent;
+}
+
+loadDailyLogs();
