@@ -1,19 +1,15 @@
-async function loadDaily() {
-    const fileList = ["2025-12-02.md", "2025-12-03.md"];  // manually list for now
-    const container = document.getElementById("daily-log-container");
+async function loadDailyLogs() {
+    const filePath = "/RIA-Website/assets/developments/daily/2025-12-03.md";
 
-    container.innerHTML = ""; // clear default message
+    const response = await fetch(filePath);
+    const markdownText = await response.text();
 
-    for (const file of fileList) {
-        const response = await fetch(`../assets/documents/developments/daily/${file}`);
-        if (response.ok) {
-            const text = await response.text();
-            const div = document.createElement("div");
-            div.classList.add("dev-item");
-            div.innerText = text;
-            container.appendChild(div);
-        }
-    }
+    const htmlContent = markdownText
+        .replace(/### (.*)/g, "<h3>$1</h3>")
+        .replace(/\*\*(.*)\*\*/g, "<strong>$1</strong>")
+        .replace(/\n/g, "<br>");
+
+    document.getElementById("daily-log-container").innerHTML = htmlContent;
 }
 
-loadDaily();
+loadDailyLogs();

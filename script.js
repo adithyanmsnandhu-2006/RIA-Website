@@ -32,9 +32,14 @@ function revealOnScroll(section) {
 }
 
 window.addEventListener("scroll", () => {
-    revealOnScroll(document.getElementById("timeline"));
-    revealOnScroll(document.getElementById("purpose"));
-    revealOnScroll(document.getElementById("features"));
+    const timeline = document.getElementById("timeline");
+const purpose = document.getElementById("purpose");
+const features = document.getElementById("features");
+
+if (timeline) revealOnScroll(timeline);
+if (purpose) revealOnScroll(purpose);
+if (features) revealOnScroll(features);
+
 });
 
 /* Smooth Scroll */
@@ -150,4 +155,3 @@ async function loadGalleryImages() {
     });
 }
 
-    
