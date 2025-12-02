@@ -1,21 +1,19 @@
-async function loadDailyLogs() {
-    const latestFile = "2025-12-03.md";  // change daily when you upload new file
-    const filePath = `../assets/developments/daily/${latestFile}`;
+async function loadDaily() {
+    const fileList = ["2025-12-02.md", "2025-12-03.md"];  // manually list for now
+    const container = document.getElementById("daily-log-container");
 
-    try {
-        const response = await fetch(filePath);
-        const text = await response.text();
+    container.innerHTML = ""; // clear default message
 
-        const html = text
-            .replace(/### (.*)/g, "<h3>$1</h3>")
-            .replace(/\*\*(.*)\*\*/g, "<strong>$1</strong>")
-            .replace(/\n/g, "<br>");
-
-        document.getElementById("daily-log-container").innerHTML = html;
-
-    } catch (error) {
-        console.log("Daily log load error:", error);
+    for (const file of fileList) {
+        const response = await fetch(`../assets/documents/developments/daily/${file}`);
+        if (response.ok) {
+            const text = await response.text();
+            const div = document.createElement("div");
+            div.classList.add("dev-item");
+            div.innerText = text;
+            container.appendChild(div);
+        }
     }
 }
 
-loadDailyLogs();
+loadDaily();

@@ -150,4 +150,4 @@ async function loadGalleryImages() {
     });
 }
 
-loadGalleryImages();
+    
