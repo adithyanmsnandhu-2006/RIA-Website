@@ -1199,3 +1199,14 @@ pre {
     color: #777;
     font-size: 18px;
 }
+.dev-panel { display: none; }
+.dev-panel.active { display: block; }
+
+.dev-card {
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(0,255,255,0.08);
+    border: 1px solid rgba(0,255,255,0.35);
+    box-shadow: 0 0 22px #00eaff66;
+    margin-bottom: 25px;
+}

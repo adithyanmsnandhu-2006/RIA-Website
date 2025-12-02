@@ -28,32 +28,47 @@
 <main class="page-container">
 
     <h1 class="dev-title">DEVELOPMENT LOGS</h1>
-    <p class="dev-sub">Daily, weekly & monthly evolution updates — fetched automatically.</p>
+    <p class="dev-sub">Daily, weekly & monthly updates — fetched automatically.</p>
 
-    <!-- SECTIONS -->
-    <section class="dev-section">
-        <h2>Daily Logs</h2>
-        <section class="dev-section">
-    <h2>Daily Logs</h2>
-    <div id="daily-log-container"></div>
-</section>
+    <!-- DEV TABS -->
+    <div class="dev-tabs">
+        <button class="dev-tab active" data-target="daily-panel">Daily</button>
+        <button class="dev-tab" data-target="weekly-panel">Weekly</button>
+        <button class="dev-tab" data-target="monthly-panel">Monthly</button>
+    </div>
 
-    </section>
+    <!-- PANELS -->
+    <div class="dev-panels">
 
-    <section class="dev-section">
-        <h2>Weekly Logs</h2>
-        <ul id="weekly-logs" class="dev-list"></ul>
-    </section>
+        <!-- DAILY -->
+        <div id="daily-panel" class="dev-panel active">
+            <h2 class="dev-panel-title">Daily Logs</h2>
+            <div id="daily-log-container" class="dev-list">
+                <p class="empty-msg">No logs uploaded yet.</p>
+            </div>
+        </div>
 
-    <section class="dev-section">
-        <h2>Monthly Logs</h2>
-        <ul id="monthly-logs" class="dev-list"></ul>
-    </section>
+        <!-- WEEKLY -->
+        <div id="weekly-panel" class="dev-panel">
+            <h2 class="dev-panel-title">Weekly Logs</h2>
+            <ul id="weekly-logs" class="dev-list">
+                <p class="empty-msg">No logs uploaded yet.</p>
+            </ul>
+        </div>
+
+        <!-- MONTHLY -->
+        <div id="monthly-panel" class="dev-panel">
+            <h2 class="dev-panel-title">Monthly Logs</h2>
+            <ul id="monthly-logs" class="dev-list">
+                <p class="empty-msg">No logs uploaded yet.</p>
+            </ul>
+        </div>
+
+    </div>
 
 </main>
 
 <script src="../script.js"></script>
-<script src="../scripts/dev-fetch.js"></script>
 
 </body>
 </html>
