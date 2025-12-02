@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    document.body.style.opacity = "1";
-
     const intro = document.getElementById("intro");
     const main = document.getElementById("main-content");
 
-    setTimeout(() => {
-        intro.style.opacity = "0";
+    if (intro && main) {
+        document.body.style.opacity = "1";
+
         setTimeout(() => {
-            intro.style.display = "none";
-            main.style.opacity = "1";
-            document.body.style.overflow = "auto";
-        }, 800);
-    }, 3500);
+            intro.style.opacity = "0";
+            setTimeout(() => {
+                intro.style.display = "none";
+                main.style.opacity = "1";
+                document.body.style.overflow = "auto";
+            }, 800);
+        }, 3500);
+    }
 });
+
 
 window.addEventListener("scroll", () => {
     const nav = document.querySelector(".navbar");
