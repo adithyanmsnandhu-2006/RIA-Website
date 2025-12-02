@@ -1127,3 +1127,23 @@ pre {
     margin-top: 10px;
     opacity: 0.8;
 }
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gallery-image {
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00eaff;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #00eaff;
+}

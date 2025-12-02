@@ -129,3 +129,25 @@ document.querySelectorAll(".tab").forEach(tab => {
         });
     });
 });
+// AUTO LOAD GALLERY IMAGES
+const galleryFolder = "../assets/images/gallery/";
+
+async function loadGalleryImages() {
+    const galleryGrid = document.getElementById("galleryGrid");
+
+    // Manually list files instead of auto directory reading (GitHub hosting limitation)
+    const images = [
+        "Screenshot 2025-11-30 202031.png",
+        // Add more filenames here when uploaded
+    ];
+
+    images.forEach(image => {
+        const imgElement = document.createElement("img");
+        imgElement.src = `${galleryFolder}${image}`;
+        imgElement.alt = image;
+        imgElement.classList.add("gallery-image");
+        galleryGrid.appendChild(imgElement);
+    });
+}
+
+loadGalleryImages();
