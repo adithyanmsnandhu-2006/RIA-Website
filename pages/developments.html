@@ -25,41 +25,50 @@
     </nav>
 </header>
 
-<main class="page-container">
+<main class="page-container dev-page">
 
     <h1 class="dev-title">DEVELOPMENT LOGS</h1>
-    <p class="dev-sub">Daily, weekly & monthly updates — fetched automatically.</p>
+    <p class="dev-sub">Daily, weekly &amp; monthly updates — fetched automatically.</p>
 
     <!-- DEV TABS -->
     <div class="dev-tabs">
-        <button class="dev-tab active" data-target="daily-panel">Daily</button>
-        <button class="dev-tab" data-target="weekly-panel">Weekly</button>
-        <button class="dev-tab" data-target="monthly-panel">Monthly</button>
+        <button class="dev-tab active" data-target="daily-panel">DAILY</button>
+        <button class="dev-tab" data-target="weekly-panel">WEEKLY</button>
+        <button class="dev-tab" data-target="monthly-panel">MONTHLY</button>
     </div>
 
     <!-- PANELS -->
     <div class="dev-panels">
 
-        <div id="daily-panel" class="dev-panel active">
-            <h2>Daily Logs</h2>
+        <!-- DAILY -->
+        <section id="daily-panel" class="dev-panel active">
+            <h2 class="dev-panel-title">Daily Logs</h2>
+            <p class="dev-panel-sub">Day-by-day grind – what was actually done today.</p>
+
             <div id="daily-log-container" class="dev-list">
                 <p class="empty-msg">No logs uploaded yet.</p>
             </div>
-        </div>
+        </section>
 
-        <div id="weekly-panel" class="dev-panel">
-            <h2>Weekly Logs</h2>
+        <!-- WEEKLY -->
+        <section id="weekly-panel" class="dev-panel">
+            <h2 class="dev-panel-title">Weekly Logs</h2>
+            <p class="dev-panel-sub">Weekly reflections and bigger patterns.</p>
+
             <ul id="weekly-logs" class="dev-list">
                 <p class="empty-msg">No logs uploaded yet.</p>
             </ul>
-        </div>
+        </section>
 
-        <div id="monthly-panel" class="dev-panel">
-            <h2>Monthly Logs</h2>
+        <!-- MONTHLY -->
+        <section id="monthly-panel" class="dev-panel">
+            <h2 class="dev-panel-title">Monthly Logs</h2>
+            <p class="dev-panel-sub">Macro view – what actually changed this month.</p>
+
             <ul id="monthly-logs" class="dev-list">
                 <p class="empty-msg">No logs uploaded yet.</p>
             </ul>
-        </div>
+        </section>
 
     </div>
 
