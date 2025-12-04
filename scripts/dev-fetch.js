@@ -8,15 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // base path: match your current structure
     // Right now your .md files are under:
     // assets/images/developments/daily/
-    const basePath = "../assets/images/developments/daily/";
+   const basePath = "../assets/documents/developments/daily/";
+const files = [
+    "2025-12-02.md",
+    "2025-12-03.md",
+    "Day-1---30-Nov-2025.md"
+];
 
-    // List the markdown files you actually have in the repo
-    const files = [
-        "2025-12-02.md",
-        "2025-12-03.md",
-        "Day-1---30-Nov-2025.md"
-        // add/remove items as needed
-    ];
 
     // remove "no logs" text if we successfully load at least one
     let loadedAny = false;
