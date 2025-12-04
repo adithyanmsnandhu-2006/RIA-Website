@@ -519,6 +519,47 @@ body.page-dark .navbar {
     color: #baf5ff;
     text-shadow: 0 0 15px #00eaff;
 }
+/* =============== CORE OBJECTIVES =============== */
+
+.core-objectives {
+    margin-top: 120px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.core-title {
+    font-family: 'Orbitron';
+    font-size: 38px;
+    color: #00eaff;
+    letter-spacing: 3px;
+    text-shadow: 0 0 16px #00aaff;
+    margin-bottom: 40px;
+}
+
+.core-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.core-card {
+    padding: 20px 24px;
+    border-radius: 14px;
+    background: rgba(0,255,255,0.08);
+    border: 1px solid rgba(0,255,255,0.28);
+    box-shadow: 0 0 26px rgba(0,255,255,0.25);
+    backdrop-filter: blur(10px);
+    color: #dffcff;
+    transition: 0.3s ease;
+}
+
+.core-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 40px #00eaffaa;
+}
+
 
 /* =============== DEVELOPMENTS PAGE =============== */
 
