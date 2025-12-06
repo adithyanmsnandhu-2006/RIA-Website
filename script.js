@@ -168,6 +168,41 @@ document.addEventListener("DOMContentLoaded", () => {
             galleryGrid.appendChild(img);
         });
     }
+    /* ====== AUTO LOAD GALLERY VIDEOS ====== */
+const videoGrid = document.getElementById("videoGrid");
+if (videoGrid) {
+    const videoFolder = "../assets/videos/";
+
+    const videos = [
+
+    ];
+
+    videos.forEach(file => {
+        const video = document.createElement("video");
+        video.src = videoFolder + file;
+        video.controls = true;
+        video.classList.add("gallery-video");
+        videoGrid.appendChild(video);
+    });
+}
+/* ====== AUTO LOAD GALLERY AUDIO ====== */
+const audioGrid = document.getElementById("audioGrid");
+if (audioGrid) {
+    const audioFolder = "../assets/voice/";
+
+    const audios = [
+        
+    ];
+
+    audios.forEach(file => {
+        const audio = document.createElement("audio");
+        audio.src = audioFolder + file;
+        audio.controls = true;
+        audio.classList.add("gallery-audio");
+        audioGrid.appendChild(audio);
+    });
+}
+
 
     /* ====== DEVELOPMENT TABS (DAILY / WEEKLY / MONTHLY) ====== */
     const devTabs  = document.querySelectorAll(".dev-tab");
