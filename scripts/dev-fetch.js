@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // assets/images/developments/daily/
    const basePath = "../assets/documents/developments/daily/";
 const files = [
-    "2025-12-02.md",
     "2025-12-03.md",
     "Day-1---30-Nov-2025.md"
 ];
